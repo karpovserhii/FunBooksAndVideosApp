@@ -1,3 +1,10 @@
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\NUnit3.TestAdapter.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\NUnit3.TestAdapter.pdb
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\nunit.engine.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\nunit.engine.api.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\nunit.engine.core.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\testcentric.engine.metadata.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\MembershipService.deps.json
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\MembershipService.runtimeconfig.json
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\MembershipService.exe
@@ -28,6 +35,7 @@ C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\nunit.framework.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\Refit.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\PurchaseService\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll

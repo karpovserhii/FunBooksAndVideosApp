@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tPkb0Oj1FQHGfdUf+J90VimFYLtFHW7RKxBklAuhmmMaPm0rZ/XiVnWKgqV8GYiS//8lo/3Ww7K8r+O2oN0JgQ==",
+  "dgSpecHash": "JuH2iW/05DKGD559xfgqSnYN2GT9bqZ43ButqiaypTrQJPNiQBX8FnaXrNu/Tczu6E9alcTEh59zo73MHJ0fLA==",
   "success": true,
   "projectFilePath": "C:\\Users\\skarp\\source\\repos\\FunBooksAndVideosApp\\Models\\Models.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\skarp\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\skarp\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\skarp\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\skarp\\.nuget\\packages\\nunit3testadapter\\4.4.0\\nunit3testadapter.4.4.0.nupkg.sha512",
     "C:\\Users\\skarp\\.nuget\\packages\\refit\\6.3.2\\refit.6.3.2.nupkg.sha512",
     "C:\\Users\\skarp\\.nuget\\packages\\system.net.http.json\\6.0.0\\system.net.http.json.6.0.0.nupkg.sha512",
     "C:\\Users\\skarp\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",

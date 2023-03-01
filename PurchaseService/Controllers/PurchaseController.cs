@@ -47,9 +47,9 @@ namespace PurchaseService.Controllers
 		[HttpPost]
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<IActionResult> RegisterPurchase(Purchase purchase)
+        public IActionResult RegisterPurchase(Purchase purchase)
 		{
-			await _manager.RegisterPurchaseAsync(purchase);
+			_manager.RegisterPurchase(purchase);
 			return Ok();
 		}
 	}

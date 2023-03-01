@@ -198,6 +198,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
             "Refit": {
               "target": "Package",
               "version": "[6.3.2, )"
@@ -274,6 +282,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.3, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

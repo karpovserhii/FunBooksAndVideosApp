@@ -1,4 +1,12 @@
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\NUnit3.TestAdapter.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\NUnit3.TestAdapter.pdb
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\nunit.engine.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\nunit.engine.api.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\nunit.engine.core.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\testcentric.engine.metadata.dll
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\DataAccess.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\DataAccess.pdb
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\Common.dll
@@ -14,6 +22,5 @@ C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\obj\Debug\net7.0\Dat
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\obj\Debug\net7.0\DataAccess.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\obj\Debug\net7.0\DataAccess.pdb
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\bin\Debug\net7.0\DataAccess.runtimeconfig.json
 C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\obj\Debug\net7.0\DataAccess.genruntimeconfig.cache
+C:\Users\skarp\source\repos\FunBooksAndVideosApp\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll

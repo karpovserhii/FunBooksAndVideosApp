@@ -13,84 +13,42 @@ namespace Models.Implementations.Processors
     {
         private readonly IMembershipActivationService _membershipActivationService;
         private readonly IShippingService _shippingService;
-        private PurchaseOrderProcessResult result;
-        private List<Action<Purchase>> Steps = new List<Action<Purchase>>();
+        public CompositeStep RootStep { get; } = new CompositeStep();
 
-        public PurchaseProcessor(IMembershipActivationService membershipActivationService, IShippingService shippingService)
+		public PurchaseProcessor(IMembershipActivationService membershipActivationService, IShippingService shippingService)
         {
             _membershipActivationService = membershipActivationService;
             _shippingService = shippingService;
         }
 
-		public void AddMembershipActivation()
-		{
-			Steps.Add((purchase) =>
-			{
-				try
-				{
-					result.MembershipStatus = _membershipActivationService.ActivateMembershipAsync(purchase);
-                    if(result.MembershipStatus == null) {
-                        result.Success = false;
-                    }
-				}
-				catch (Exception ex)
-				{
-					result.Success = false;
-					result.ErrorMessages.Add($"Failed to activate membership");
-				}
-			});
-
-
-
-		}
-
-		public void AddShippingActivation() {
-            Steps.Add((purchase) =>
-            {
-                foreach (var item in purchase.Orders.Where(t => t.OrderItem.OrderItemType == Enums.OrderItemType.Book || t.OrderItem.OrderItemType == Enums.OrderItemType.Video))
-                {
-                    var shippingResult = _shippingService.GenerateShippingSlip(purchase.CustomerId, item);
-                    if (shippingResult != null)
-                        result.ShippingSlips.Add(shippingResult);
-                    else
-                    {
-                        result.ErrorMessages.Add($"Failed generate Shipping Slip for item: [{item.OrderItem.NameOfItem}]");
-                        result.Success = false;
-                    }
-
-                }
-            });
-           
-        }
-
-   
-
-        public async Task<PurchaseOrderProcessResult> ProcessPurchaseAsync(Purchase purchase)
+        public PurchaseOrderProcessResult ProcessPurchase(Purchase purchase)
         {
-            if (purchase == null)
+            if(purchase == null)
             {
-                throw new ArgumentNullException(nameof(purchase));
+                throw new ArgumentNullException($"Purchase is not defined");
             }
+            if(purchase.Orders?.Any() != true) {
+                throw new ArgumentException("Purchase must contain order items");
+            }
+            if (purchase.Orders.Any(t => t.OrderItem.OrderItemType == Models.Enums.OrderItemType.VideoClubMembership
+                || t.OrderItem.OrderItemType == Models.Enums.OrderItemType.BookClubMembeship
+                || t.OrderItem.OrderItemType == Models.Enums.OrderItemType.Premium))
+            {
+				RootStep.Add(new MembershipActivationStep(_membershipActivationService));
+			}
+            if (purchase.Orders.Any(t => t.OrderItem.OrderItemType == Models.Enums.OrderItemType.Book || t.OrderItem.OrderItemType == Models.Enums.OrderItemType.Video))
+            {
+				RootStep.Add(new ShippingActivationStep(_shippingService));
+			}
 
-            if (purchase.Orders == null || !purchase.Orders.Any())
-            {
-                throw new InvalidOperationException("Purchase order must contain at least one item");
-            }
-            result = new PurchaseOrderProcessResult()
-            {
-                Success = true
-            }; ;
-            
-            
-           foreach(var step in Steps) {
-                if(result.Success) 
-                    step(purchase);
-            }
 
-            if (result.Success)
-                _membershipActivationService.CompleteTransaction(result.MembershipStatus);
-           
-            return result;
+			var result = RootStep.ProcessPurchase(purchase);
+			if (result.Success)
+			{
+				_membershipActivationService.CompleteTransaction(result.MembershipStatus);
+			}
+
+			return result;
             
         }
     }
