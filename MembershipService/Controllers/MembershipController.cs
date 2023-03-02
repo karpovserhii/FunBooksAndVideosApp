@@ -27,14 +27,12 @@ namespace MembershipService.Controllers
         }
 
         [HttpGet]
-       // [Route("/memberships")]
         public async Task<IActionResult> GetAllMemberships()
         {
             return Ok(await _manager.GetMembershipStatuses());
         }
 
         [HttpGet("{customerId}"), ActionName("GetCustomerMembership")]
-       // [Route("/memberships/{customerId:int}")]
         public IActionResult GetMembershipByCustomerId(int customerId)
         {
             var membershipStatus = _manager.GetMembershipForCustomer(customerId);
@@ -47,7 +45,6 @@ namespace MembershipService.Controllers
         }
 
         [HttpPost(), ActionName("CreateCustomerMembership")]
-        //[Route("/memberships/{customerId:int}")]
         public IActionResult CreateMembershipByPurchase(Purchase purchase)
         {
             _manager.UpdateStatus(purchase.CustomerId, purchase);
@@ -56,7 +53,6 @@ namespace MembershipService.Controllers
         }
 
         [HttpPut]
-        //[Route("/memberships")]
         public IActionResult UpdateMembershipForCustomer(MembershipStatus status)
         {
              _manager.AddOrUpdateMembershipForCustomer(status);

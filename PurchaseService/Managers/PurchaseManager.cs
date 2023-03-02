@@ -2,6 +2,7 @@
 using DataAccess.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Models;
+using Models.Implementations.Processors;
 using Models.Interfaces;
 using Models.Interfaces.Api;
 using Models.Interfaces.Services;
@@ -12,20 +13,19 @@ using System.Threading.Tasks;
 
 namespace PurchaseService.Managers
 {
-	public class PurchaseManager
+	public class PurchaseManager : IPurchaseManager
 	{
 		private readonly PurchaseRepository _repo;
-		private readonly PurchaseProcessorFactory factory;
+		private readonly PurchaseProcessor processor;
         public PurchaseManager(IRepository<Purchase> repository, IMembershipActivationService membershipService, IShippingService shippingService)
 		{
 			_repo = repository as PurchaseRepository;
-			factory = new PurchaseProcessorFactory(membershipService, shippingService);
+			processor = new PurchaseProcessor(membershipService, shippingService);
 		}
 		[HttpPost]
-		public async Task RegisterPurchaseAsync(Purchase purchase)
+		public void RegisterPurchase(Purchase purchase)
 		{
-			var processor = factory.CreatePurchaseOrderProcessor(purchase);
-			var result = await processor.ProcessPurchaseAsync(purchase);
+			var result = processor.ProcessPurchase(purchase);
 			if (!result.Success)
 			{
 				return;
@@ -43,6 +43,11 @@ namespace PurchaseService.Managers
 		public IPurchase GetPurchaseInfo(int id)
 		{
 			return _repo.GetById(id);
+		}
+
+		public void CancelPurchase(IPurchase purchase)
+		{
+			_repo.Delete(purchase as Purchase);
 		}
 	}
 }

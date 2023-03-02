@@ -8,7 +8,7 @@ namespace Models.Interfaces.Services
 {
     public interface IMembershipActivationService
     {
-        MembershipStatus ActivateMembershipAsync(Purchase purchase);
+        MembershipStatus ActivateMembership(Purchase purchase);
         void CompleteTransaction(MembershipStatus membershipStatus);
     }
 }

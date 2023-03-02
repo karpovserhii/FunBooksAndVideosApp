@@ -22,7 +22,7 @@ namespace MembershipService.Managers
 			_customerApi = api;
 		}
 
-		public MembershipStatus ActivateMembershipAsync(Purchase purchase)
+		public MembershipStatus ActivateMembership(Purchase purchase)
 		{
 			var membershipItems = purchase.Orders.Where(il => il.OrderItem.OrderItemType == Models.Enums.OrderItemType.BookClubMembeship 
 				|| il.OrderItem.OrderItemType == Models.Enums.OrderItemType.VideoClubMembership

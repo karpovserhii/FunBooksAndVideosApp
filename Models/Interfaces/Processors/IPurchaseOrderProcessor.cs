@@ -1,4 +1,5 @@
 ﻿using Models.Implementations;
+using Models.Implementations.Processors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace Models.Interfaces.Processors
 {
 	public interface IPurchaseOrderProcessor
 	{
-        Task<PurchaseOrderProcessResult> ProcessPurchaseAsync(Purchase purchase);
-    }
+		PurchaseOrderProcessResult ProcessPurchase(Purchase purchase);
+		CompositeStep RootStep { get; }
+	}
 }
