@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\skarp\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\skarp\\.nuget\\packages"
-    ]
-  }
-}

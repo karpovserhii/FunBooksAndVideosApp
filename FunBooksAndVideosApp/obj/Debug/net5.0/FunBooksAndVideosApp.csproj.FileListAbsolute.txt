@@ -1,7 +1,0 @@
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\FunBooksAndVideosApp\obj\Debug\net5.0\FunBooksAndVideosApp.csproj.AssemblyReference.cache
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\FunBooksAndVideosApp\obj\Debug\net5.0\FunBooksAndVideosApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\FunBooksAndVideosApp\obj\Debug\net5.0\FunBooksAndVideosApp.AssemblyInfoInputs.cache
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\FunBooksAndVideosApp\obj\Debug\net5.0\FunBooksAndVideosApp.AssemblyInfo.cs
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\FunBooksAndVideosApp\obj\Debug\net5.0\FunBooksAndVideosApp.csproj.CoreCompileInputs.cache
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\FunBooksAndVideosApp\obj\Debug\net5.0\FunBooksAndVideosApp.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\skarp\source\repos\FunBooksAndVideosApp\FunBooksAndVideosApp\obj\Debug\net5.0\FunBooksAndVideosApp.MvcApplicationPartsAssemblyInfo.cache
